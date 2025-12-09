@@ -74,7 +74,13 @@ export function Messages({ onNavigate, userType }: MessagesProps) {
                 {mockConversations.map((conversation) => (
                   <button
                     key={conversation.id}
-                    onClick={() => setSelectedConversation(conversation.id)}
+                    onClick={() => {
+                      setSelectedConversation(conversation.id);
+                      // On mobile, navigate to detail view
+                      if (window.innerWidth < 768) {
+                        onNavigate({ type: 'conversationDetail', conversationId: conversation.id });
+                      }
+                    }}
                     className={`w-full p-4 flex gap-3 hover:bg-gray-50 transition-colors border-b border-gray-100 ${
                       selectedConversation === conversation.id ? 'bg-blue-50' : ''
                     }`}
@@ -123,17 +129,27 @@ export function Messages({ onNavigate, userType }: MessagesProps) {
                       </div>
                     </div>
                     
-                    <button
-                      onClick={() => {
-                        const provider = mockConversations.find(c => c.id === selectedConversation);
-                        if (provider) {
-                          onNavigate({ type: 'profile', providerId: provider.providerId });
-                        }
-                      }}
-                      className="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-                    >
-                      Se profil
-                    </button>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => {
+                          onNavigate({ type: 'conversationDetail', conversationId: selectedConversation });
+                        }}
+                        className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                      >
+                        Åpne i fullskjerm
+                      </button>
+                      <button
+                        onClick={() => {
+                          const provider = mockConversations.find(c => c.id === selectedConversation);
+                          if (provider) {
+                            onNavigate({ type: 'profile', providerId: provider.providerId });
+                          }
+                        }}
+                        className="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      >
+                        Se profil
+                      </button>
+                    </div>
                   </div>
 
                   {/* Messages */}

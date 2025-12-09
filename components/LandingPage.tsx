@@ -159,7 +159,7 @@ export function LandingPage({ onNavigate, userType, onUserTypeChange }: LandingP
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 FestPlatform. Din markedsplass for eventleverandører.</p>
+          <p>&copy; 2024 EventIQ. Din markedsplass for eventleverandører.</p>
         </div>
       </footer>
     </div>

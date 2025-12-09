@@ -4,6 +4,7 @@ import { CategoryBrowser } from '../components/CategoryBrowser';
 import { ProviderProfile } from '../components/ProviderProfile';
 import { Messages } from '../components/Messages';
 import { ProviderDashboard } from '../components/ProviderDashboard';
+import { ConversationDetail } from '../components/ConversationDetail';
 
 export type UserType = 'customer' | 'provider' | null;
 
@@ -12,6 +13,7 @@ export type Page =
   | { type: 'category'; category: string }
   | { type: 'profile'; providerId: string }
   | { type: 'messages' }
+  | { type: 'conversationDetail'; conversationId: string }
   | { type: 'dashboard' };
 
 function App() {
@@ -46,6 +48,14 @@ function App() {
       
       {currentPage.type === 'messages' && (
         <Messages
+          onNavigate={setCurrentPage}
+          userType={userType}
+        />
+      )}
+      
+      {currentPage.type === 'conversationDetail' && (
+        <ConversationDetail
+          conversationId={currentPage.conversationId}
           onNavigate={setCurrentPage}
           userType={userType}
         />
