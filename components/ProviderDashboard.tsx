@@ -20,7 +20,7 @@ type ProviderDashboardProps = {
 export function ProviderDashboard({ onNavigate }: ProviderDashboardProps) {
   const [activeTab, setActiveTab] = useState<'profile' | 'stats'>('profile');
   const [availability, setAvailability] = useState<'available' | 'limited' | 'booked'>('available');
-  const [services, setServices] = useState<string[]>(['Bryllup', 'Bursdagsfester']);
+  const [services, setServices] = useState<string[]>(['Bryllup', 'Bursdagsfester', 'test']);
   const [newService, setNewService] = useState('');
 
   const handleAddService = () => {
@@ -154,7 +154,7 @@ export function ProviderDashboard({ onNavigate }: ProviderDashboardProps) {
                     <label className="block text-sm mb-2 text-gray-700">
                       Kategori
                     </label>
-                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select className="w-full px-4 py-2 bg-white text-gray-900 dark:bg-white dark:text-gray-900 border border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500">
                       <option>DJ & Musikk</option>
                       <option>Fotograf & Video</option>
                       <option>Catering & Mat</option>
@@ -211,7 +211,7 @@ export function ProviderDashboard({ onNavigate }: ProviderDashboardProps) {
                 <textarea
                   rows={6}
                   defaultValue="Jeg er en erfaren DJ som har underholdt på hundrevis av bryllup, bursdager og firmafester. Med et bredt musikkbibliotek og god forståelse for stemningen, sørger jeg for at dansegulvet alltid er fullt."
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 bg-white text-gray-900 dark:bg-white dark:text-gray-900 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Fortell om deg selv og hva du tilbyr..."
                 />
               </div>

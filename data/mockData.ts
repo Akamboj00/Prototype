@@ -120,7 +120,7 @@ export const providers: Provider[] = [
     email: 'magnus@djmagnus.no',
     instagram: '@djmagnus',
     facebook: 'DJMagnusOfficial',
-    services: ['Mehndi', 'Sangeet', 'Walima', 'Nikah', 'Bursdagsfester', 'Forlovelse'],
+    services: ['Mehndi', 'Sangeet', 'Walima', 'Nikah', 'Bursdagsfester', 'Forlovelse', 'test'],
     rating: 4.8,
     reviewCount: 47,
   },

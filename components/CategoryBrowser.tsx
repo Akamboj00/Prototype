@@ -68,7 +68,7 @@ export function CategoryBrowser({ category, onNavigate, userType }: CategoryBrow
         {/* Filters */}
         <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
           <div className="flex flex-wrap gap-4">
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select className="px-4 py-2 bg-white text-gray-900 dark:bg-white dark:text-gray-900 border border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option>Alle områder</option>
               <option>Oslo</option>
               <option>Bergen</option>
@@ -76,13 +76,13 @@ export function CategoryBrowser({ category, onNavigate, userType }: CategoryBrow
               <option>Stavanger</option>
             </select>
 
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select className="px-4 py-2 bg-white text-gray-900 dark:bg-white dark:text-gray-900 border border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option>Tilgjengelighet</option>
               <option>Ledig neste måned</option>
               <option>Begrenset ledighet</option>
             </select>
 
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select className="px-4 py-2 bg-white text-gray-900 dark:bg-white dark:text-gray-900 border border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option>Sorter etter</option>
               <option>Høyest rangering</option>
               <option>Flest anmeldelser</option>
