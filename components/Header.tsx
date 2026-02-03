@@ -19,9 +19,9 @@ export function Header({ onNavigate, userType, onUserTypeChange, showSearch }: H
             className="flex items-center gap-2"
           >
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white">F</span>
+              <span className="text-white">E</span>
             </div>
-            <span className="text-xl">FestPlatform</span>
+            <span className="text-xl">Eventbasen</span>
           </button>
 
           {/* Search bar - optional */}
